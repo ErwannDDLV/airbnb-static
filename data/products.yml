@@ -1,12 +1,12 @@
 - name: Romain
   image: romain.jpg
-  title: welcome in my place
-  tagline: nice to be
+  title: Nice to be
+  tagline: welcome in my place
   picture: card-london.jpeg
 - name: Anne
   image: anne.jpg
   title: Welcome
-  tagline: super cool
+  tagline: So cool
   picture: card-brussels.jpeg
 - name: Seb
   image: seb.jpg
