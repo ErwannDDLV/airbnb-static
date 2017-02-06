@@ -1,18 +1,28 @@
 /* Footer design */
-.wrapper-footer{
+.wrapper-footer {
   background: #071013;
   padding: 15px;
 }
 
-.container-footer{
+.container-footer {
   display: flex;
   justify-content: space-around;
   color: #DDDCEA;
   align-items: center;
 }
 
-.fa {
-  color: #DDDCEA;
-  padding: 15px;
-  font-size: 25px;
+#footer p {
+  margin-top: 17px;
+}
+#footer ul {
+  margin-top: 10px;
+}
+#footer a {
+  color: #CCCCCC;
+  font-size: 38px;
+  letter-spacing: 20px;
+  transition: color 0.5s ease;
+}
+#footer a:hover {
+  color: yellow;
 }
