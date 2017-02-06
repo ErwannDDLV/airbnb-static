@@ -3,8 +3,122 @@ title: Le Wagon Middleman boilerplate
 ---
 
 <div class="welcome text-center padded">
-  <h1>Welcome to Middleman</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p>
+  <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+    <div class="banner-content">
+      <h1>WELCOME HOME</h1>
+      <p>Rent unique places to stay from local hosts in 190+ countries.</p>
+      <button type="button" class="btn btn-primary">How it works ?</button>
+    </div>
+  </div>
+  <!-- Your features code -->
+  <div class="text-center padded features">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-3">
+          <img src="images/globe.png" alt="globe">
+          <h2>Discover the world</h2>
+          <p>The earth is your new home.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3">
+          <img src="images/dollar.png" alt="dollar">
+          <h2>Pay online</h2>
+          <p>No cash issues anymore.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3">
+          <img src="images/beer.png" alt="beer">
+          <h2>Meet people</h2>
+          <p>Discover new culture and lifestyle.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3">
+          <img src="images/heart.png" alt="heart" class="image-circle">
+          <h2>Share and love</h2>
+          <p>Join a community you will love.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your cards code -->
+  <div class="wrapper-grey">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');" class="img-responsive" alt="Responsive image">
+            <div class="card-category">Popular</div>
+              <div class="card-description">
+                <h2>Some stuff</h2>
+                <p>Very cool stuff, useful and smart</p>
+              </div>
+            <img class="card-user avatar-large" src="images/anne.jpg">
+            <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg');">
+            <div class="card-category">Popular</div>
+              <div class="card-description">
+                <h2>Some stuff</h2>
+                <p>Very cool stuff, useful and smart</p>
+              </div>
+            <img class="card-user avatar-large" src="images/romain.jpeg">
+            <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
+            <div class="card-category">Popular</div>
+              <div class="card-description">
+                <h2>Some stuff</h2>
+                <p>Very cool stuff, useful and smart</p>
+              </div>
+            <img class="card-user avatar-large" src="images/seb.jpg">
+            <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your newsletter code -->
+  <div class="newsletter text-center">
+    <h2>MY NEWSLETTER</h2>
+    <p>Leave us your mail and get news from us.</p>
+    <form class="form-inline">
+      <div class="form-group">
+        <label class="sr-only">Email</label>
+        <p class="form-control-static"></p>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword2" class="sr-only">name@email.com</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary">subscribe</button>
+    </form>
+  </div>
+  <!-- Your map code -->
+  <div class="carte">
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script type="text/javascript">
+    var myLatlng = new google.maps.LatLng(44.837789,-0.5791799999999512);
+
+    var myOptions = {
+      zoom: 16,
+      center: myLatlng,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [] // TODO: replace [] by array from https://snazzymaps.com/
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), myOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: "You are here!"
+    });
+    </script>
+  </div>
+
 </div>
