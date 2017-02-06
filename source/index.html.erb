@@ -23,26 +23,13 @@ title: Le Wagon Middleman boilerplate
   <div class="text-center padded features">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-lg-3">
-          <img src="images/globe.png" alt="globe">
-          <h2>Discover the world</h2>
-          <p>The earth is your new home.</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-3">
-          <img src="images/dollar.png" alt="dollar">
-          <h2>Pay online</h2>
-          <p>No cash issues anymore.</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-3">
-          <img src="images/beer.png" alt="beer">
-          <h2>Meet people</h2>
-          <p>Discover new culture and lifestyle.</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-3">
-          <img src="images/heart.png" alt="heart" class="image-circle">
-          <h2>Share and love</h2>
-          <p>Join a community you will love.</p>
-        </div>
+        <% data.pictos.each do |picto| %>
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <%= image_tag picto[:image], alt:picto[:text_image], class: "image-circle" %>
+            <h2> <%= picto[:title_p] %> </h2>
+            <p> <%= picto[:tagline_p] %> </p>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -51,39 +38,19 @@ title: Le Wagon Middleman boilerplate
   <div class="wrapper-grey">
     <div class="container text-center">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');" class="img-responsive" alt="Responsive image">
-            <div class="card-category">Popular</div>
-              <div class="card-description">
-                <h2>Some stuff</h2>
-                <p>Very cool stuff, useful and smart</p>
-              </div>
-            <img class="card-user avatar-large" src="images/anne.jpg">
-            <a class="card-link" href="#" ></a>
+        <% data.products.each do |product|%>
+          <div class="col-xs-12 col-sm-6 col-lg-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(images/<%= product[:picture] %>);" class="img-responsive" alt="Responsive image">
+              <div class="card-category">Popular</div>
+                <div class="card-description">
+                  <h2> <%= product[:title] %> </h2>
+                  <p> <%= product[:tagline] %> </p>
+                </div>
+                <%= image_tag product[:image], class: "card-user avatar-large" %>
+                <%= link_to product[:name], "#", class: "card-link" %>
+            </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg');">
-            <div class="card-category">Popular</div>
-              <div class="card-description">
-                <h2>Some stuff</h2>
-                <p>Very cool stuff, useful and smart</p>
-              </div>
-            <img class="card-user avatar-large" src="images/romain.jpg">
-            <a class="card-link" href="#" ></a>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
-            <div class="card-category">Popular</div>
-              <div class="card-description">
-                <h2>Some stuff</h2>
-                <p>Very cool stuff, useful and smart</p>
-              </div>
-            <img class="card-user avatar-large" src="images/seb.jpg">
-            <a class="card-link" href="#" ></a>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>

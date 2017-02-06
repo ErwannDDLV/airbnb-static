@@ -1,4 +1,15 @@
-- name: Some product
-  image: some_product.png
-- name: Other product
-  image: other_product.png
+- name: Romain
+  image: romain.jpg
+  title: welcome in my place
+  tagline: nice to be
+  picture: card-london.jpeg
+- name: Anne
+  image: anne.jpg
+  title: Welcome
+  tagline: super cool
+  picture: card-brussels.jpeg
+- name: Seb
+  image: seb.jpg
+  title: Hello
+  tagline: sweat place
+  picture: card-paris.jpg

@@ -1,3 +1,6 @@
 - icon: "facebook"
-  url:
-
+  url: "http://www.facebook.com"
+- icon: "twitter"
+  url: "http://www.twitter.com"
+- icon: "linkedin"
+  url: "http://www.linkedin.com"

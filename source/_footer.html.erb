@@ -2,21 +2,13 @@
   <div class="wrapper-footer">
     <div class="container-footer">
       <ul class="list-inline">
-        <li>
-          <a href="  ">
-            <i class="fa fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a href="  ">
-            <i class="fa fa-twitter"></i>
-          </a>
-        </li>
-        <li>
-          <a href="  ">
-            <i class="fa fa-linkedin"></i>
-          </a>
-        </li>
+        <% data.social_links.each do |social_link|%>
+          <li>
+            <% link_to social_link[:url] do %>
+              <i class="fa fa-<%= social_link[:icon] %>"></i>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
       <p>This is a Airbnb Home challenge @ LeWagon</p>
     </div>
