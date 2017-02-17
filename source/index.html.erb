@@ -38,16 +38,16 @@ title: Le Wagon Middleman boilerplate
   <div class="wrapper-grey">
     <div class="container text-center">
       <div class="row">
-        <% data.products.each do |product|%>
+        <% data.flats.each do |owner, flat|%>
           <div class="col-xs-12 col-sm-6 col-lg-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(images/<%= product[:picture] %>);" class="img-responsive" alt="Responsive image">
-              <div class="card-category">Popular</div>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path flat.picture %>);" class="img-responsive" alt="Responsive image">
+              <div class="card-category"><%= flat.city%></div>
                 <div class="card-description">
-                  <h2> <%= product[:title] %> </h2>
-                  <p> <%= product[:tagline] %> </p>
+                  <h2> <%= flat.title %> </h2>
+                  <p> <%= flat.description %> </p>
                 </div>
-                <%= image_tag product[:image], class: "card-user avatar-large" %>
-                <%= link_to product[:name], "#", class: "card-link" %>
+                <%= image_tag flat.owner_picture, class: "card-user avatar-large" %>
+                <%= link_to "", "/flats/#{owner}.html", class: "card-link" %>
             </div>
           </div>
         <% end %>

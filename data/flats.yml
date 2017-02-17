@@ -1,0 +1,48 @@
+seb:
+  owner_name: Sebastien Saunier
+  picture: card-paris.jpg
+  owner_picture: seb.jpg
+  name: Seb's home
+  summary: Charming room in Montmartre
+  city: Paris, France
+  wifi: true
+  rating: 3
+  type: appartement
+  pets: true
+  beds: 2
+romain:
+  owner_name: Romain Paillard
+  picture: card-london.jpeg
+  owner_picture: romain.jpg
+  name: Romain's home
+  summary: Nice flat in Piccadilly
+  city: London, UK
+  wifi: false
+  rating: 3
+  type: appartement
+  pets: true
+  beds: 2
+anne:
+  owner_name: Anne Dupont
+  picture: card-brussels.jpeg
+  owner_picture: http://placehold.it/150x150
+  name: Anne's home
+  summary: Sweet place in Brussels
+  city: Brussels, Belgium
+  wifi: false
+  rating: 3
+  type: appartement
+  pets: true
+  beds: 2
+erwann:
+  owner_name: Erwann DDLV
+  picture: http://www.ville-viroflay.fr/fileadmin/_processed_/f/9/csm_Centre-Ville-_2__49c39e2939.jpg
+  owner_picture: Profil_01.jpg
+  name: Erwann's home
+  summary: Great room in Viroflay
+  city: Viroflay, France
+  wifi: true
+  rating: 3
+  type: appartement
+  pets: true
+  beds: 2
